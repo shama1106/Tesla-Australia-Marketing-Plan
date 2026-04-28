@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tesla Australia — Strategic Marketing Plan | Shama Praveen</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: #CC0000;
+    --red-dark: #8B0000;
+    --red-light: #FCEBEB;
+    --red-text: #A32D2D;
+    --blue-light: #E6F1FB;
+    --blue-text: #0C447C;
+    --blue-mid: #185FA5;
+    --green: #3B6D11;
+    --green-light: #EAF3DE;
+    --amber: #854F0B;
+    --amber-light: #FAEEDA;
+    --gray-100: #EDECE7;
+    --text: #1a1a18;
+    --text-muted: #5F5E5A;
+    --text-hint: #8A8880;
+    --border: rgba(0,0,0,0.10);
+    --surface: #ffffff;
+    --bg: #F4F3EF;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 22px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(244,243,239,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+  }
+
+  .nav-brand { font-size: 13px; font-weight: 500; color: var(--text-muted); }
+
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+  .nav-links a { font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--text); }
+
+  .page { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+  .hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #CC0000 65%, #ff4444 100%);
+    border-radius: var(--radius-xl);
+    padding: 3.5rem 3rem 3rem;
+    color: white;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute; top: -60px; right: -60px;
+    width: 240px; height: 240px; border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+  }
+
+  .hero-tag {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    background: rgba(255,255,255,0.15);
+    display: inline-block; padding: 5px 12px; border-radius: 6px;
+    margin-bottom: 1.25rem; color: rgba(255,255,255,0.9);
+    border: 0.5px solid rgba(255,255,255,0.2);
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700; line-height: 1.25;
+    margin-bottom: 1rem; color: white;
+  }
+
+  .hero-sub {
+    font-size: 15px; color: rgba(255,255,255,0.8);
+    max-width: 560px; line-height: 1.7; margin-bottom: 2rem;
+  }
+
+  .hero-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  .pill {
+    font-size: 12px; background: rgba(255,255,255,0.12);
+    color: white; padding: 5px 13px; border-radius: 20px;
+    border: 0.5px solid rgba(255,255,255,0.22);
+  }
+
+  .section { margin-bottom: 2.5rem; }
+
+  .section-label {
+    font-size: 10.5px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-hint); margin-bottom: 0.85rem; padding-left: 2px;
+  }
+
+  .metrics {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 12px; margin-bottom: 2rem;
+  }
+
+  .metric {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.1rem 1rem; text-align: center;
+  }
+
+  .metric-num {
+    font-size: 26px; font-weight: 500; color: var(--text);
+    display: block; font-family: 'Playfair Display', serif;
+  }
+
+  .metric-label { font-size: 11px; color: var(--text-muted); margin-top: 3px; display: block; }
+
+  .card {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem 2rem;
+    font-size: 15px; line-height: 1.8;
+  }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 2rem; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 2rem; }
+
+  .seg-card {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg); padding: 1.25rem 1.4rem;
+  }
+
+  .seg-icon {
+    width: 36px; height: 36px; border-radius: 9px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px; margin-bottom: 0.75rem;
+  }
+
+  .seg-card h3 { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 0.4rem; }
+  .seg-card p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+  .obj-card {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg); padding: 1.1rem 1.25rem;
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+
+  .obj-num {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--red-light); color: var(--red-text);
+    font-size: 12px; font-weight: 500;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+
+  .obj-title { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 3px; }
+  .obj-desc { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+
+  .pos-card {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg); padding: 1.25rem 1.4rem;
+  }
+
+  .pos-badge {
+    font-size: 10.5px; font-weight: 500;
+    padding: 3px 8px; border-radius: 10px; display: inline-block; margin-bottom: 8px;
+  }
+
+  .pos-card h3 { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 5px; }
+  .pos-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; font-style: italic; }
+
+  .mix-card {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg); padding: 1.25rem 1.4rem;
+  }
+
+  .mix-header { display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem; }
+
+  .mix-icon {
+    width: 32px; height: 32px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center; font-size: 15px;
+  }
+
+  .mix-title { font-size: 15px; font-weight: 500; color: var(--text); }
+
+  .mix-card ul { padding-left: 16px; }
+  .mix-card li { font-size: 13px; color: var(--text-muted); line-height: 1.8; }
+
+  .score-card {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg); padding: 1.75rem 2rem;
+  }
+
+  .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .bar-label { font-size: 13px; color: var(--text-muted); width: 160px; flex-shrink: 0; }
+  .bar-track { flex: 1; height: 7px; background: var(--gray-100); border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; }
+  .bar-pct { font-size: 12px; color: var(--text-muted); width: 40px; text-align: right; flex-shrink: 0; }
+
+  .author-card {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: var(--radius-md); padding: 1rem 1.5rem;
+    display: flex; align-items: center; gap: 14px;
+  }
+
+  .avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--red-light); color: var(--red-text);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 500; flex-shrink: 0;
+  }
+
+  .author-name { font-size: 15px; font-weight: 500; color: var(--text); }
+  .author-id { font-size: 13px; color: var(--text-muted); }
+
+  .conclusion-card {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg); padding: 1.75rem 2rem;
+    font-size: 14px; line-height: 1.8; color: var(--text-muted);
+  }
+
+  footer {
+    text-align: center; padding: 2.5rem 2rem;
+    font-size: 12px; color: var(--text-hint);
+    border-top: 0.5px solid var(--border); margin-top: 3rem;
+  }
+
+  @media (max-width: 600px) {
+    .page { padding: 2rem 1.25rem 4rem; }
+    .metrics { grid-template-columns: repeat(2, 1fr); }
+    .grid2, .grid3 { grid-template-columns: 1fr; }
+    .hero { padding: 2.5rem 1.75rem 2rem; }
+    nav { padding: 0 1.25rem; }
+    .nav-links { gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-brand">Tesla Australia — Marketing Plan · c3470623</span>
+  <ul class="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#segments">Segments</a></li>
+    <li><a href="#strategy">Strategy</a></li>
+    <li><a href="#mix">4Ps</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <div class="hero" id="overview">
+    <div class="hero-tag">Individual Assignment · Marketing Management · Student ID: c3470623</div>
+    <h1>Tesla Australia — Strategic Marketing Plan</h1>
+    <p class="hero-sub">A comprehensive 12-month marketing strategy to reclaim market share and expand into family and fleet segments in the rapidly evolving Australian EV market.</p>
+    <div class="hero-pills">
+      <span class="pill">Tesla</span>
+      <span class="pill">EV Market</span>
+      <span class="pill">Marketing Strategy</span>
+      <span class="pill">Australia</span>
+      <span class="pill">4Ps Framework</span>
+      <span class="pill">STP Analysis</span>
+    </div>
+  </div>
+
+  <div class="metrics">
+    <div class="metric"><span class="metric-num">42%</span><span class="metric-label">Current Market Share</span></div>
+    <div class="metric"><span class="metric-num">50%</span><span class="metric-label">Target Market Share</span></div>
+    <div class="metric"><span class="metric-num">12</span><span class="metric-label">New Service Centres</span></div>
+    <div class="metric"><span class="metric-num">3</span><span class="metric-label">SMART Objectives</span></div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Introduction</div>
+    <div class="card">
+      Tesla has led Australia's EV market since 2014, but faces mounting pressure from competitors like BYD, Hyundai and Polestar offering more affordable alternatives. A 12% market share decline to 42% by 2024 signals the urgency for strategic renewal. This marketing plan identifies SMART objectives, targeted segmentation, multi-layered positioning, and a comprehensive marketing mix — grounded in academic theory and industry data — to restore and grow Tesla's competitive advantage in Australia.
+    </div>
+  </div>
+
+  <div class="section" id="segments">
+    <div class="section-label">Target Market Segments</div>
+    <div class="grid3">
+      <div class="seg-card">
+        <div class="seg-icon" style="background: var(--blue-light);">💻</div>
+        <h3>Urban Tech Professionals</h3>
+        <p>Ages 25–45 in Sydney, Melbourne, Brisbane. Early adopters who value Autopilot, OTA updates, and minimalist connected design.</p>
+      </div>
+      <div class="seg-card">
+        <div class="seg-icon" style="background: var(--green-light);">👨‍👩‍👧</div>
+        <h3>Eco-Conscious Families</h3>
+        <p>Mid-high income suburban families. Safety-focused and value-driven, drawn to Model Y's 5-star ANCAP rating and low running costs.</p>
+      </div>
+      <div class="seg-card">
+        <div class="seg-icon" style="background: var(--amber-light);">🏢</div>
+        <h3>Corporate &amp; Gov Fleets</h3>
+        <p>Institutional buyers targeting ESG goals. Prioritise total cost of ownership, battery range, and scalable fleet management.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="strategy">
+    <div class="section-label">SMART Objectives</div>
+    <div class="grid2">
+      <div class="obj-card">
+        <div class="obj-num">1</div>
+        <div>
+          <div class="obj-title">Expand Service Infrastructure</div>
+          <div class="obj-desc">Open 12 new service centres in regional QLD, TAS, WA and NSW by Dec 2025. Reduce average wait time from 16 to under 7 days.</div>
+        </div>
+      </div>
+      <div class="obj-card">
+        <div class="obj-num">2</div>
+        <div>
+          <div class="obj-title">Grow Market Share to 50%</div>
+          <div class="obj-desc">Achieve 25% sales growth by Q4 2025 via government EV subsidies, improved delivery logistics, and affordability campaigns.</div>
+        </div>
+      </div>
+      <div class="obj-card">
+        <div class="obj-num">3</div>
+        <div>
+          <div class="obj-title">Expand Family &amp; Fleet Segments</div>
+          <div class="obj-desc">Secure 5 new fleet partners and grow family Model Y/3 purchases by 35% by June 2026 through ESG-based targeted promotions.</div>
+        </div>
+      </div>
+      <div class="score-card" style="padding: 1.25rem 1.4rem;">
+        <div class="section-label" style="margin-bottom: 0.75rem;">Strategic Progress Targets</div>
+        <div class="bar-row"><span class="bar-label">Market share (current)</span><div class="bar-track"><div class="bar-fill" style="width:42%;background:var(--red);"></div></div><span class="bar-pct">42%</span></div>
+        <div class="bar-row"><span class="bar-label">Market share (target)</span><div class="bar-track"><div class="bar-fill" style="width:50%;background:var(--green);"></div></div><span class="bar-pct">50%</span></div>
+        <div class="bar-row"><span class="bar-label">Family buyer growth</span><div class="bar-track"><div class="bar-fill" style="width:35%;background:var(--blue-mid);"></div></div><span class="bar-pct">+35%</span></div>
+        <div class="bar-row"><span class="bar-label">Wait time reduction</span><div class="bar-track"><div class="bar-fill" style="width:56%;background:var(--amber);"></div></div><span class="bar-pct">56%↓</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Positioning Strategy</div>
+    <div class="grid3">
+      <div class="pos-card">
+        <span class="pos-badge" style="background:var(--blue-light);color:var(--blue-text);">Urban Tech</span>
+        <h3>Drive the Future</h3>
+        <p>"Intelligent, Electric, Effortless" — FSD capabilities, OTA updates, and seamless digital connectivity.</p>
+      </div>
+      <div class="pos-card">
+        <span class="pos-badge" style="background:var(--green-light);color:var(--green);">Eco Families</span>
+        <h3>Smart for Your Family</h3>
+        <p>"Right for the Planet" — 5-star safety, generous space, low cost of ownership, sustainable living.</p>
+      </div>
+      <div class="pos-card">
+        <span class="pos-badge" style="background:var(--amber-light);color:var(--amber);">Fleets</span>
+        <h3>Powering Purpose</h3>
+        <p>"Electric Mobility for Sustainable Enterprise" — ESG alignment, low TCO, and fleet analytics tools.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="mix">
+    <div class="section-label">Marketing Mix — 4Ps</div>
+    <div class="grid2">
+      <div class="mix-card">
+        <div class="mix-header">
+          <div class="mix-icon" style="background:var(--blue-light);">📦</div>
+          <span class="mix-title">Product</span>
+        </div>
+        <ul>
+          <li>Low-cost Model 3 variant (&lt;$60K after subsidy) for first-time EV buyers</li>
+          <li>Localised features: UV glass, enhanced AC, local charger GPS</li>
+          <li>TeslaCare bundles — annual maintenance + mobile service visits</li>
+          <li>Future FSD and AI ecosystem compatibility</li>
+        </ul>
+      </div>
+      <div class="mix-card">
+        <div class="mix-header">
+          <div class="mix-icon" style="background:var(--green-light);">💰</div>
+          <span class="mix-title">Price</span>
+        </div>
+        <ul>
+          <li>Model 3 Base: ~$58,000 AUD · TCO: $0.04/km</li>
+          <li>Model Y Long Range: ~$72,000 · Fleet/Tech segment</li>
+          <li>Fleet bulk discounts &amp; government incentive alignment</li>
+          <li>Novated leasing, buy-back guarantees, trade-in bonuses</li>
+        </ul>
+      </div>
+      <div class="mix-card">
+        <div class="mix-header">
+          <div class="mix-icon" style="background:var(--amber-light);">📣</div>
+          <span class="mix-title">Promotion</span>
+        </div>
+        <ul>
+          <li>Tech users: YouTube reviews, VR test drive simulations</li>
+          <li>Families: Radio, parenting blogs, cinema advertising</li>
+          <li>Fleets: LinkedIn webinars, ESG whitepapers, business press</li>
+          <li>Referral rewards + community EV expos &amp; pop-up stores</li>
+        </ul>
+      </div>
+      <div class="mix-card">
+        <div class="mix-header">
+          <div class="mix-icon" style="background:var(--red-light);">📍</div>
+          <span class="mix-title">Place</span>
+        </div>
+        <ul>
+          <li>12 new service centres: Canberra, Cairns, Hobart &amp; regional areas</li>
+          <li>70% increase in mobile service units by 2025–2026</li>
+          <li>Partner with EVIE &amp; Chargefox for regional charging coverage</li>
+          <li>Enhanced online configurators with live chat &amp; fleet portals</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Conclusion</div>
+    <div class="conclusion-card">
+      This Tesla Australia marketing plan addresses the evolving EV landscape with a clear sequence of strategic actions. By targeting urban tech professionals, eco-conscious families, and corporate fleets — and executing across all four Ps — Tesla can not only reclaim lost market share but build durable brand equity. The plan bridges infrastructure gaps, expands accessibility, and reinforces Tesla's core positioning pillars of innovation, sustainability, and customer trust. With disciplined execution, Tesla is positioned for sustainable growth and competitive leadership in the Australian EV market.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Author</div>
+    <div class="author-card">
+      <div class="avatar">SP</div>
+      <div>
+        <div class="author-name">Shama Praveen</div>
+        <div class="author-id">Student ID: c3470623 · Individual Assignment · Marketing Management</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Tesla Australia Strategic Marketing Plan · Shama Praveen · c3470623 · Marketing Management
+</footer>
+
+</body>
+</html>
